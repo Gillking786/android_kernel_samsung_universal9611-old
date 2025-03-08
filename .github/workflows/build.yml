@@ -63,4 +63,3 @@ jobs:
             echo "zip_exists=true" >> $GITHUB_OUTPUT
           else
             echo "zip_exists=false" >> $GITHUB_OUTPUT
-          fi
