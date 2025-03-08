@@ -64,11 +64,3 @@ jobs:
           else
             echo "zip_exists=false" >> $GITHUB_OUTPUT
           fi
-
-      - name: Upload build to Telegram
-        if: steps.check_files.outputs.zip_exists == 'true'
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_KEY }}
-          document: ./Grass*.zip
