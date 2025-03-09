@@ -64,10 +64,3 @@ jobs:
           else
             echo "zip_exists=false" >> $GITHUB_OUTPUT
             fi
-
-            - name: Upload Kernel Zip
-  uses: actions/upload-artifact@v3
-  with:
-    name: kernel-build
-    path: out/arch/arm64/boot/
-
